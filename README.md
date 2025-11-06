@@ -75,10 +75,9 @@ dotnet run --project src/Meeting.Hub.Web.Api/Meeting.Hub.Web.Api.csproj
 
 A API será iniciada em:
 
-- 🔗 [`https://localhost:7158/swagger`](https://localhost:7158/swagger)
 - 🔗 [`http://localhost:5130/swagger`](http://localhost:5130/swagger)
 
-> Esses endereços são configurados via `launchSettings.json`.
+> Esse endereço é configurado via `launchSettings.json`.
 
 Caso queira verificar se o ambiente está como **Development**, a variável `ASPNETCORE_ENVIRONMENT` está definida automaticamente no perfil do projeto.
 
