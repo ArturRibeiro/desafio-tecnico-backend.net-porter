@@ -45,20 +45,41 @@ O arquivo `compose.yaml` define os serviços necessários.
 ### 📌 Serviços definidos:
 
 - `db_postgres`: Banco de dados PostgreSQL 16
-  - Porta local: `5432`
-  - Volume persistente: `porter_postgres_data`
-  - Variáveis de ambiente:
-    - `POSTGRES_DB=meeting`
-    - `POSTGRES_USER=postgres`
-    - `POSTGRES_PASSWORD=password`
+    - Porta local: `5432`
+    - Volume persistente: `porter_postgres_data`
+    - Variáveis de ambiente:
+        - `POSTGRES_DB=meeting`
+        - `POSTGRES_USER=postgres`
+        - `POSTGRES_PASSWORD=password`
 
 - `pgadmin`: (opcional, se habilitado)
-  - Interface para administrar o PostgreSQL via browser
+    - Interface para administrar o PostgreSQL via browser
 
 ---
 
 ### ▶️ Subir os serviços
 
+
 ```bash
 docker compose -f compose.yaml up -d
 ```
+---
+
+## ▶️ Executar a API
+
+Após subir o banco com o Docker Compose, rode a API com:
+
+```bash
+dotnet run --project src/Meeting.Hub.Web.Api/Meeting.Hub.Web.Api.csproj
+```
+
+A API será iniciada em:
+
+- 🔗 [`https://localhost:7158/swagger`](https://localhost:7158/swagger)
+- 🔗 [`http://localhost:5130/swagger`](http://localhost:5130/swagger)
+
+> Esses endereços são configurados via `launchSettings.json`.
+
+Caso queira verificar se o ambiente está como **Development**, a variável `ASPNETCORE_ENVIRONMENT` está definida automaticamente no perfil do projeto.
+
+---
