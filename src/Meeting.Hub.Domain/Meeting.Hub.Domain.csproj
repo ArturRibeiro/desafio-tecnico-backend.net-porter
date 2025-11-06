@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="../../Common.props"/>
   <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="12.1.0" />
+    <PackageReference Include="FluentValidation" Version="$(FluentValidation)" />
   </ItemGroup>
 </Project>

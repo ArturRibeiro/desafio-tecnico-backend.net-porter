@@ -1,12 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="../../Common.props"/>
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="13.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.21" />
+    <PackageReference Include="MediatR" Version="$(MediatR)" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(EntityFrameworkCor)" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Meeting.Hub.Domain\Meeting.Hub.Domain.csproj" />
   </ItemGroup>
-
 </Project>

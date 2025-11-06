@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="../../Common.props"/><ItemGroup>
-    <PackageReference Include="MediatR" Version="13.1.0" />
+    <PackageReference Include="MediatR" Version="$(MediatR)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Meeting.Hub.Domain\Meeting.Hub.Domain.csproj" />

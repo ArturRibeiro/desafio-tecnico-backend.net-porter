@@ -1,25 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <Import Project="../../../Common.props"/>
   <ItemGroup>
-    <PackageReference Include="FluentAssertions" Version="8.8.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.21" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
-    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
-    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
-    <PackageReference Include="Testcontainers.PostgreSql" Version="4.8.1" />
-    <PackageReference Include="xunit" Version="2.4.2" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="6.0.0">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="FluentAssertions" Version="$(FluentAssertions)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="$(MicrosoftAspNetCoreMvcTesting)" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdk)" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="$(SpecFlowPlusLivingDocPlugin)" />
+    <PackageReference Include="SpecFlow.xUnit" Version="$(SpecFlowxUnit)" />
+    <PackageReference Include="Testcontainers.PostgreSql" Version="$(TestcontainersPostgreSql)" />
+    <PackageReference Include="xunit" Version="$(xUnit)" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\Meeting.Hub.Web.Api\Meeting.Hub.Web.Api.csproj" />
   </ItemGroup>
-
 </Project>
