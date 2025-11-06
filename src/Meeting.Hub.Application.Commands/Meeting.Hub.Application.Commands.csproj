@@ -1,15 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <ItemGroup>
+    <Import Project="../../Common.props"/><ItemGroup>
     <PackageReference Include="MediatR" Version="13.1.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Meeting.Hub.Domain\Meeting.Hub.Domain.csproj" />
   </ItemGroup>
